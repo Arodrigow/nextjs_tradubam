@@ -1,5 +1,5 @@
 import React from 'react'
-import QuoteButton from './utils/QuoteButton'
+import QuoteButton from '../utils/QuoteButton'
 
 function Abovethefold() {
   return (

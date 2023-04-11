@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
 import logoBAM from './../public/images/Logo_BAM.svg'
-import QuoteButton from './utils/QuoteButton'
+import QuoteButton from './QuoteButton'
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);

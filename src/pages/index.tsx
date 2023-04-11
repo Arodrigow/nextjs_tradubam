@@ -1,4 +1,4 @@
-import Abovethefold from '@/components/Abovethefold'
+import Abovethefold from '@/components/main/Abovethefold'
 import Head from 'next/head'
 
 export default function Home() {
