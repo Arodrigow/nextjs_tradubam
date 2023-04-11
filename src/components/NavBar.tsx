@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+
+import logoBAM from './../public/images/Logo_BAM.svg'
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
     const [color, setColor] = useState('transparent');
-    const [textColor, setTextColor] = useState('white');
+    const [shadow, setShadow] = useState('none');
 
     const handleNav = () =>{
         setNav(!nav)
@@ -14,41 +17,42 @@ const NavBar = () => {
     useEffect(()=>{
         const changeColor = () =>{
             if(window.scrollY >= 90){
-                setColor("white");
-                setTextColor("#E05414");
+                setColor("#000F23");
+                setShadow("rgba(0, 0, 0, 0.40) 0px 3px 8px")
+
             }else{                
                 setColor("transparent");
-                setTextColor("white");
+                setShadow("none")
             }
         }
         window.addEventListener('scroll', changeColor)
     }, [])
   return (
-    <div style={{backgroundColor: `${color}`}} className='fixed top-0 left-0 w-full z-10 ease-in duration-300'>
-        <div className='max-w-[1250px] m-auto flex justify-between p-4 text-white'>
-            <Link href="/">
-                <h1 style={{color: `${textColor}`}} className='font-bold text-4xl'>BAM</h1>
+    <div style={{backgroundColor: `${color}`, boxShadow: `${shadow}`}} className='fixed top-0 left-0 w-full h-21 z-10 ease-in duration-300'>
+        <div className='max-w-[1400x] m-auto flex justify-between p-4 text-white'>
+            <Link href="/" className='flex justify-center items-center  w-max'>
+                <Image priority src={logoBAM} alt='BAM - Tradução e Consultoria em Línguas Estrangeiras' className='h-14 w-auto'></Image>
             </Link>
-            <ul style={{color: `${textColor}`}} className='hidden sm:flex'>
-                <li className='p-4 hover:text-accentColor hover:border-r-[1px] hover:border-b-[1px]'>
+            <ul className='hidden sm:flex sm:justify-center sm:items-center'>
+                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Início</Link>
                 </li>                
-                <li className='p-4 hover:text-accentColor hover:border-r-[1px] hover:border-b-[1px]'>
+                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Empresa</Link>
                 </li>          
-                <li className='p-4 hover:text-accentColor hover:border-r-[1px] hover:border-b-[1px]'>
+                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Serviços</Link>
                 </li>
-                <li className='p-4 hover:text-accentColor hover:border-r-[1px] hover:border-b-[1px]'>
+                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Contato</Link>
                 </li>
-                <li className='p-4 hover:text-accentColor hover:border-r-[1px] hover:border-b-[1px]'>
+                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'> LINGUA</Link>
                 </li>
             </ul>
 
-        <div className='block sm:hidden z-10'>
-            {nav ?  <AiOutlineClose size={25} onClick={handleNav} /> :  <AiOutlineMenu size={25}  onClick={handleNav} style={{color: `${textColor}`}}/>}
+        <div className='flex items-center sm:hidden z-10'>
+            {nav ?  <AiOutlineClose size={25} onClick={handleNav} /> :  <AiOutlineMenu size={25}  onClick={handleNav}/>}
         </div>
 
         <div className={ nav ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center w-full h-screen bg-mainColor text-center ease-in duration-300' : 'sm:hidden absolute top-0 bottom-0 left-[-100%] right-0 flex justify-center items-center w-full h-screen bg-mainColor text-center ease-in duration-300'}>
