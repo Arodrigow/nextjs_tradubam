@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
-import logoBAM from './../public/images/Logo_BAM.svg'
+import logoBAM from './../../public/images/Logo_BAM.svg'
 import QuoteButton from './QuoteButton'
 
 const NavBar = () => {
@@ -75,6 +75,9 @@ const NavBar = () => {
                 </li>
                 <li className='p-4 text-3xl hover:text-accentColor'>
                     <Link href='/'> LINGUA</Link>
+                </li>
+                <li>                                       
+                    <QuoteButton></QuoteButton>
                 </li>
             </ul> 
         </div>
