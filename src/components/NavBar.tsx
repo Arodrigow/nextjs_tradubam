@@ -4,6 +4,7 @@ import Image from 'next/image'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
 import logoBAM from './../public/images/Logo_BAM.svg'
+import QuoteButton from './utils/QuoteButton'
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -34,20 +35,23 @@ const NavBar = () => {
                 <Image priority src={logoBAM} alt='BAM - Tradução e Consultoria em Línguas Estrangeiras' className='h-14 w-auto'></Image>
             </Link>
             <ul className='hidden sm:flex sm:justify-center sm:items-center'>
-                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Início</Link>
                 </li>                
-                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Empresa</Link>
                 </li>          
-                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Serviços</Link>
                 </li>
-                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'>Contato</Link>
                 </li>
-                <li className='p-4 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                     <Link href='/'> LINGUA</Link>
+                </li>
+                <li>                                       
+                    <QuoteButton></QuoteButton>
                 </li>
             </ul>
 

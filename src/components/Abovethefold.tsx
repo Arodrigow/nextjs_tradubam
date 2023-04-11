@@ -1,4 +1,5 @@
 import React from 'react'
+import QuoteButton from './utils/QuoteButton'
 
 function Abovethefold() {
   return (
@@ -10,7 +11,7 @@ function Abovethefold() {
        <p className='py-5 text-lg text-white font-light'>Clientes novos ganham presentes por aqui! <br />
         Por ser o seu primeiro trabalho conosco, ofertaremos um <br />
        super desconto de 20%!</p> 
-      <button className='border border-transparent p-3 bg-accentColor rounded-full text-lg text-white font-bold'>Pedir orçamento</button>
+      <QuoteButton></QuoteButton>
     </div>
   </div>
   )
