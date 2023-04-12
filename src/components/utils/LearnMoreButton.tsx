@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
 
-function LearnMoreButton({to}) {
+interface props{
+  to: string
+}
+
+function LearnMoreButton({to}:props) {
 
   return (
     <Link href={to}>
