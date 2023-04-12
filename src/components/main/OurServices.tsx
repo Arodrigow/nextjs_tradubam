@@ -33,7 +33,7 @@ function OurServices() {
     <section className='flex justify-center items-center flex-col p-8 '>
       <h2 className='text-mainColor font-bold text-4xl py-12'>Nossos Serviços</h2>
       <div className='block sm:grid sm:grid-cols-3 sm:gap-10'>
-          <div className='hidden sm:block sm:row-span-2 sm:rounded-2xl sm:p-4 sm:bg-mainColor '> 
+          <div className='hidden sm:block sm:row-span-2 sm:rounded-2xl sm:p-4 sm:bg-mainColor sm:shadow-lg sm:shadow-mainColor'> 
             <h3 className='text-white text-3xl font-bold'>Precisa Que Traduzam O Seu Abstract?</h3>
             <br />
             <p className='text-white'>Quer publicar em uma revista internacional mas não sabe o idioma? <br/>
