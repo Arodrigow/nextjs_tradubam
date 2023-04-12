@@ -10,7 +10,7 @@ interface props{
 function MainServiceCard({serviceName, serviceDescription, serviceIcon}: props) {
     
     return (
-    <div className='pb-4 sm:'>
+    <div className='pb-10'>
         <div className='flex items-center justify-between'>
         <h3 className='font-bold text-2xl'>
          {serviceName}

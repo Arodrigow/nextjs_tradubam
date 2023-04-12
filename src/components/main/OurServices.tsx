@@ -30,8 +30,9 @@ function OurServices() {
   ]
 
   return (
-    <section className='flex justify-center items-center flex-col p-8 '>
-      <h2 className='text-mainColor font-bold text-4xl py-12'>Nossos Serviços</h2>
+    <section className='flex justify-center items-center flex-col px-8 py-4  mb-12'>
+      <h2 className='text-mainColor font-bold text-4xl py-6'>Nossos Serviços</h2>
+      <hr className='w-2/6 sm:w-1/12 border-2 mb-10 border-accentColor bg-accentColor'/>
       <div className='block sm:grid sm:grid-cols-3 sm:gap-10'>
           <div className='hidden sm:block sm:row-span-2 sm:rounded-2xl sm:p-4 sm:bg-mainColor sm:shadow-lg sm:shadow-mainColor'> 
             <h3 className='text-white text-3xl font-bold'>Precisa Que Traduzam O Seu Abstract?</h3>
