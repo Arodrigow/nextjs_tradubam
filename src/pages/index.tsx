@@ -1,4 +1,5 @@
 import Abovethefold from '@/components/main/Abovethefold'
+import OurClients from '@/components/main/OurClients'
 import OurServices from '@/components/main/OurServices'
 import WhyUs from '@/components/main/WhyUs'
 import Head from 'next/head'
@@ -16,6 +17,7 @@ export default function Home() {
         <Abovethefold></Abovethefold>
         <OurServices></OurServices>
         <WhyUs></WhyUs>
+        <OurClients></OurClients>
       </main>
     </>
   )
