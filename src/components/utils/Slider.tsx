@@ -19,16 +19,16 @@ function Slider() {
     }
 
     return (
-        <div className='flex justify-center items-center max-w-[1240px] mx-auto'>
-        <div className='relative flex justify-center p-4'>   
+        <div className='flex justify-center items-center max-w-[1240px] sm:mx-auto'>
+        <div className='relative flex justify-center sm:p-4'>   
             {
                 Clients.map((client, index) => (                     
-                    <div key={index} className={index === current ? 'opacity-[1] ease-in duration-1000' : 'opacity-0'}>
-                        <FaArrowCircleLeft onClick={prevSlide} size={30} className='absolute top-[50%] left-[30px] cursor-pointer select-none z-[2] fill-accentColor'></FaArrowCircleLeft>
+                    <div key={index} className={index === current ? 'opacity-[1] ease-in duration-1000 flex justify-center items-center' : 'opacity-0'}>
+                        <FaArrowCircleLeft onClick={prevSlide} size={30} className='absolute top-[101%] sm:top-[50%] left-[30px] cursor-pointer select-none z-[2] fill-accentColor'></FaArrowCircleLeft>
                         {index === current && (
                             <ClientAvaliation  client={client}></ClientAvaliation>
                         )}
-                         <FaArrowCircleRight onClick={nextSlide} size={30} className='absolute top-[50%] right-[30px] cursor-pointer select-none z-[2] fill-accentColor'></FaArrowCircleRight>
+                         <FaArrowCircleRight onClick={nextSlide} size={30} className='absolute top-[101%] sm:top-[50%] right-[30px] cursor-pointer select-none z-[2] fill-accentColor'></FaArrowCircleRight>
                     </div>                 
                 ))
             }
