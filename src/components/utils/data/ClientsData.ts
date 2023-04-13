@@ -16,7 +16,7 @@ export const Clients = [
         image:  ImageClient2
     },
     {
-        name: "Maria Paula Santos",
+        name: "Luisa Miglio",
         position:"Arquiteta",
         text:"Os tradutores da BAM me ajudaram nas traduções dos artigos científicos que publicamos no grupo do mestrado da UFVJM. E também na tradução do minha dissertação final do mestrado. Trabalho excelente, com qualidade e prazo impecável. Recomendo muito!!!",
         image:  ImageClient3
