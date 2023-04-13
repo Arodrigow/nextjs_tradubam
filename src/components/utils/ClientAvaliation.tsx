@@ -13,7 +13,7 @@ interface props {
 
 function ClientAvaliation({ client }: props) {
     return (
-        <div className='flex flex-col justify-between bg-mainColor rounded-2xl p-4 sm:p-12 h-[500px] sm:h-[400px] sm:w-[80%] text-sm text-center sm:text-base'>
+        <div className='flex flex-col justify-between bg-mainColor rounded-2xl p-4 sm:p-12 h-[500px] sm:h-[400px] sm:w-[80%] text-sm text-center sm:text-base sm:shadow-lg sm:shadow-black'>
             <BsChatLeftQuoteFill className='fill-accentColor w-[40px] h-auto sm:w-[32px] sm:h-[32px]'></BsChatLeftQuoteFill>
             <br />
             <p className='text-white'>{client.text}</p>
