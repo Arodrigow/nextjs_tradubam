@@ -18,7 +18,7 @@ function ClientAvaliation({ client }: props) {
             <br />
             <p className='text-white'>{client.text}</p>
             <br />
-            <div className='flex justify-end'>
+            <div className='flex justify-center sm:justify-end w-full'>
                 <Image src={client.image} alt={'Image of our happy client'} className='w-[70px] h-auto row-span-2 rounded-full'></Image>
                 <div className='flex flex-col justify-center pl-4'>
                     <p className='text-white'>{client.name}</p>
