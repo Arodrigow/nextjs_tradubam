@@ -30,7 +30,7 @@ const NavBar = () => {
     }, [])
   return (
     <div style={{backgroundColor: `${color}`, boxShadow: `${shadow}`}} className='fixed top-0 left-0 w-full h-21 z-10 ease-in duration-300'>
-        <div className='max-w-[1400x] m-auto flex justify-between p-4 text-white'>
+        <div className='max-w-[1400px] m-auto flex justify-between p-4 text-white'>
             <Link href="/" className='flex justify-center items-center  w-max'>
                 <Image priority src={logoBAM} alt='BAM - Tradução e Consultoria em Línguas Estrangeiras' className='h-14 w-auto'></Image>
             </Link>
