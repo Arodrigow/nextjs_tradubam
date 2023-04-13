@@ -23,13 +23,13 @@ function WhyUs() {
     ]
 
   return (
-    <section className='flex justify-center items-center flex-col px-8 py-8  mb-12 bg-mainColor'>
-    <h2 className='text-white font-bold text-4xl py-6'>Por Que Escolher A BAM?</h2>
+    <section className='flex justify-center items-center flex-col px-1 sm:px-8 py-8  mb-12 bg-mainColor'>
+    <h2 className='text-center text-white font-bold text-4xl py-6'>Por Que Escolher A BAM?</h2>
     <hr className='w-2/6 sm:w-1/12 border-2 mb-10 border-accentColor bg-accentColor'/>
     <div className='block sm:grid sm:grid-cols-3 sm:gap-10'>
     {
         whyUs.map(function({title, description, image},index){
-            return <WhyUsCard title={title} description={description} image={image}></WhyUsCard>
+            return <WhyUsCard key={index} title={title} description={description} image={image}></WhyUsCard>
         })
     }
     </div>

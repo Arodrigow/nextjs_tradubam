@@ -17,7 +17,7 @@ function MainServiceCard({serviceName, serviceDescription, serviceIcon}: props) 
         </h3>
         {serviceIcon}</div>
         <br />
-        <p>{serviceDescription} <Link href={"/services"} className='text-accentColor font-bold'>Saiba mais.</Link></p>
+        <p className='text-justify sm:text-left'>{serviceDescription} <Link href={"/services"} className='text-accentColor font-bold'>Saiba mais.</Link></p>
     </div>        
   )
 }
