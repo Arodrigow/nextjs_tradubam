@@ -51,16 +51,16 @@ const NavBar = () => {
                     <Image priority src={logoBAM} alt='BAM - Tradução e Consultoria em Línguas Estrangeiras' className='h-10 w-auto'></Image>
                 </Link>
                 <ul className='hidden lg:flex lg:justify-center lg:items-center'>
-                    <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/'>Início</Link>
                     </li>
-                    <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/'>Empresa</Link>
                     </li>
-                    <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/'>Serviços</Link>
                     </li>
-                    <li className='p-3 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/'>Contato</Link>
                     </li>
                     <li className='p-3'>
