@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import {BsCaretDown} from 'react-icons/bs'
+import { BsCaretDown } from 'react-icons/bs'
 
 import logoBAM from './../../public/images/Logo_BAM.svg'
+import { Flags } from './data/Flags'
 import QuoteButton from './QuoteButton'
 import { useRouter } from 'next/router'
 
@@ -23,7 +24,7 @@ const NavBar = () => {
         setNav(!nav)
     }
 
-    const handleLocaleClicked = () =>{
+    const handleLocaleClicked = () => {
         setClicked(!clicked)
     }
 
@@ -65,12 +66,18 @@ const NavBar = () => {
                     </li>
                     <li className='p-3'>
                         <div className='group inline-block relative'>
-                            <button className='inline-flex justify-center items-center'>{locale === 'pt-br' ? 'Português' : 'English'} <BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
-                            
-                            <ul className='absolute hidden group-hover:block bg-white pt-2 rounded-xl text-mainColor shadow-sm shadow-mainColor'>
-                                {locales?.map(l => {
-                                    return <li key={l} className=''>
-                                        <Link href={'/'} className='block py-1 px-2'>{l === 'pt-br' ? 'Português' : 'English'}</Link>
+                            <button className='inline-flex justify-center items-center'>
+                            <Image src={locale === 'pt-br' ? Flags[0].source : Flags[1].source} alt={locale === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-5'></Image>
+                               <p className='pl-1'> {locale === 'pt-br' ? 'Português' : 'English'} </p><BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
+
+                            <ul className='absolute hidden group-hover:block bg-white rounded-xl text-mainColor shadow-sm shadow-mainColor drop-shadow-sm w-[175px]'>
+                                {locales?.map((l, index) => {
+                                    return <li key={l} className='rounded-sm hover:bg-mainColor/30'>
+                                        <Link href={'/'} className='flex justify-start items-center py-3 px-5'>
+                                            <Image src={Flags[index].source} alt={l === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
+                                            <p className='pl-2'>
+                                                {Flags[index].name}
+                                            </p></Link>
                                     </li>
                                 })}
                             </ul>
@@ -85,7 +92,7 @@ const NavBar = () => {
                 <div className='flex items-center lg:hidden z-10'>
                     {nav ? <AiOutlineClose size={25} onClick={handleNav} /> : <AiOutlineMenu size={25} onClick={handleNav} />}
                 </div>
-                <div onClick={nav ? handleClickOutside : handleClickOutside} className={nav ? 'w-full h-screen absolute top-0 bottom-0 left-0 right-0 bg-black/60 z-[0]' : 'hidden'}></div>
+                <div onClick={nav ? handleClickOutside : handleClickOutside} className={nav ? 'w-full h-screen absolute top-0 bottom-0 left-0 right-0 bg-black/60 z-[0] lg:hidden' : 'hidden'}></div>
                 <div className={nav ? 'lg:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center w-full sm:w-1/2 h-screen bg-mainColor text-center ease-in duration-300' : 'lg:hidden absolute top-0 bottom-0 left-[-100%] right-0 flex justify-center items-center w-full sm:w-1/2 h-screen bg-mainColor text-center ease-in duration-300'}>
                     <ul >
                         <li className='p-4 text-xl hover:text-accentColor'>
@@ -102,12 +109,17 @@ const NavBar = () => {
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
                         <div className='group inline-block relative'>
-                            <button className='inline-flex justify-center items-center'>{locale === 'pt-br' ? 'Português' : 'English'} <BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
-                            
-                            <ul className='absolute hidden group-hover:block bg-white pt-2 rounded-xl text-mainColor shadow-sm shadow-mainColor'>
-                                {locales?.map(l => {
-                                    return <li key={l} className=''>
-                                        <Link href={'/'} className='block py-1 px-2'>{l === 'pt-br' ? 'Português' : 'English'}</Link>
+                        <button className='inline-flex justify-center items-center'>
+                            <Image src={locale === 'pt-br' ? Flags[0].source : Flags[1].source} alt={locale === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-5'></Image>
+                               <p className='pl-1'> {locale === 'pt-br' ? 'Português' : 'English'} </p><BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
+                            <ul className='absolute hidden group-hover:block bg-white rounded-xl text-mainColor shadow-sm shadow-mainColor text-sm sm:text-base w-[175px]'>
+                                {locales?.map((l, index) => {
+                                    return <li key={l} className=' hover:bg-mainColor/30'>
+                                        <Link href={'/'} className='flex justify-start items-center py-3 px-5'>
+                                            <Image src={Flags[index].source} alt={l === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
+                                            <p className='pl-2'>
+                                                {Flags[index].name}
+                                            </p></Link>
                                     </li>
                                 })}
                             </ul>
