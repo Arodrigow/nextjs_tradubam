@@ -1,9 +1,10 @@
+import { appWithTranslation } from 'next-i18next'
 import Footer from '@/components/utils/Footer'
 import NavBar from '@/components/utils/NavBar'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <><NavBar></NavBar>
     <Component {...pageProps} />
@@ -11,3 +12,5 @@ export default function App({ Component, pageProps }: AppProps) {
   )
 
 }
+
+export default appWithTranslation(App)
