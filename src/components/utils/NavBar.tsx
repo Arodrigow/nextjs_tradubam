@@ -11,8 +11,7 @@ import { useRouter } from 'next/router'
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
-    const [clicked, setClicked] = useState(false);
-    const { locale, locales, push } = useRouter()
+    const {locale, locales } = useRouter()
     const [color, setColor] = useState('transparent');
     const [shadow, setShadow] = useState('none');
 
@@ -23,12 +22,6 @@ const NavBar = () => {
     const handleClickOutside = () => {
         setNav(!nav)
     }
-
-    const handleLocaleClicked = () => {
-        setClicked(!clicked)
-    }
-
-    //const handleLocale = l => () => { }
 
     useEffect(() => {
         const changeColor = () => {
@@ -67,14 +60,14 @@ const NavBar = () => {
                     <li className='p-3'>
                         <div className='group inline-block relative'>
                             <button className='inline-flex justify-center items-center'>
-                            <Image src={locale === 'pt-br' ? Flags[0].source : Flags[1].source} alt={locale === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-5'></Image>
-                               <p className='pl-1'> {locale === 'pt-br' ? 'Português' : 'English'} </p><BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
+                            <Image src={locale === 'pt' ? Flags[0].source : Flags[1].source} alt={locale === 'pt' ? 'Flag of Brazil' : 'USA flag'} className='w-5'></Image>
+                               <p className='pl-1'> {locale === 'pt' ? 'Português' : 'English'} </p><BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
 
                             <ul className='absolute hidden group-hover:block bg-white rounded-xl text-mainColor shadow-sm shadow-mainColor drop-shadow-sm w-[175px]'>
                                 {locales?.map((l, index) => {
                                     return <li key={l} className='rounded-sm hover:bg-mainColor/30'>
-                                        <Link href={'/'} className='flex justify-start items-center py-3 px-5'>
-                                            <Image src={Flags[index].source} alt={l === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
+                                        <Link href={'/'} locale={l} className='flex justify-start items-center py-3 px-5'>
+                                            <Image src={Flags[index].source} alt={l === 'pt' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
                                             <p className='pl-2'>
                                                 {Flags[index].name}
                                             </p></Link>
@@ -110,13 +103,13 @@ const NavBar = () => {
                         <li className='p-4 text-xl hover:text-accentColor'>
                         <div className='group inline-block relative'>
                         <button className='inline-flex justify-center items-center'>
-                            <Image src={locale === 'pt-br' ? Flags[0].source : Flags[1].source} alt={locale === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-5'></Image>
-                               <p className='pl-1'> {locale === 'pt-br' ? 'Português' : 'English'} </p><BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
+                            <Image src={locale === 'pt' ? Flags[0].source : Flags[1].source} alt={locale === 'pt' ? 'Flag of Brazil' : 'USA flag'} className='w-5'></Image>
+                               <p className='pl-1'> {locale === 'pt' ? 'Português' : 'English'} </p><BsCaretDown className='pl-1 w-full h-full'></BsCaretDown></button>
                             <ul className='absolute hidden group-hover:block bg-white rounded-xl text-mainColor shadow-sm shadow-mainColor text-sm sm:text-base w-[175px]'>
                                 {locales?.map((l, index) => {
                                     return <li key={l} className=' hover:bg-mainColor/30'>
-                                        <Link href={'/'} className='flex justify-start items-center py-3 px-5'>
-                                            <Image src={Flags[index].source} alt={l === 'pt-br' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
+                                        <Link href={'/'} locale={l} className='flex justify-start items-center py-3 px-5'>
+                                            <Image src={Flags[index].source} alt={l === 'pt' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
                                             <p className='pl-2'>
                                                 {Flags[index].name}
                                             </p></Link>
