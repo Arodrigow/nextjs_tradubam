@@ -52,13 +52,13 @@ const NavBar = () => {
                         <Link href='/'>{translation('Início')}</Link>
                     </li>
                     <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
-                        <Link href='/'>{translation("Empresa")}</Link>
+                        <Link href='/about'>{translation("Empresa")}</Link>
                     </li>
                     <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
-                        <Link href='/'>{translation("Serviços")}</Link>
+                        <Link href='/services'>{translation("Serviços")}</Link>
                     </li>
                     <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
-                        <Link href='/'>{translation("Contato")}</Link>
+                        <Link href='/contact'>{translation("Contato")}</Link>
                     </li>
                     <li className='p-3'>
                         <div className='group inline-block relative'>
