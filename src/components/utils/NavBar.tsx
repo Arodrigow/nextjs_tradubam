@@ -43,21 +43,21 @@ const NavBar = () => {
 
     return (
         <div style={{ backgroundColor: `${color}`, boxShadow: `${shadow}` }} className='fixed top-0 left-0 w-full h-16 z-10 ease-in duration-300'>
-            <div className='max-w-[1400px] m-auto flex justify-between p-2 text-white'>
+            <div className='max-w-[1400px] m-auto flex justify-between items-center p-2 text-white'>
                 <Link href="/" className='flex justify-center items-center  w-max '>
                     <Image priority src={logoBAM} alt='BAM - Tradução e Consultoria em Línguas Estrangeiras' className='h-10 w-auto'></Image>
                 </Link>
                 <ul className='hidden lg:flex lg:justify-center lg:items-center'>
-                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='py-2 px-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/'>{translation('Início')}</Link>
                     </li>
-                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='py-2 px-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/about'>{translation("Empresa")}</Link>
                     </li>
-                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='py-2 px-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/services'>{translation("Serviços")}</Link>
                     </li>
-                    <li className='p-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
+                    <li className='py-2 px-3 border-l-2 border-transparent hover:border-l-0 hover:border-accentColor hover:border-r-2 hover:border-b-2'>
                         <Link href='/contact'>{translation("Contato")}</Link>
                     </li>
                     <li className='p-3'>
@@ -95,13 +95,13 @@ const NavBar = () => {
                             <Link href='/'>{translation("Início")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
-                            <Link href='/'>{translation("Empresa")}</Link>
+                            <Link href='/about'>{translation("Empresa")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
-                            <Link href='/'>{translation("Serviços")}</Link>
+                            <Link href='/services'>{translation("Serviços")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
-                            <Link href='/'>{translation("Contato")}</Link>
+                            <Link href='/contact'>{translation("Contato")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
                         <div className='group inline-block relative'>
