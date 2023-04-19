@@ -1,8 +1,11 @@
 import React from 'react'
 
-function QuoteButton() {
+interface props {
+  title:string
+}
+function QuoteButton({title}:props) {
   return (
-    <button className='w-[175px] p-3 border border-transparent bg-accentColor rounded-full text-md text-white font-bold'>Pedir orçamento</button>
+    <button className='w-[175px] p-2 border border-transparent bg-accentColor rounded-full text-sm text-white font-bold'>{title}</button>
   )
 }
 
