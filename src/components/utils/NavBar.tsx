@@ -22,10 +22,6 @@ const NavBar = () => {
         setNav(!nav)
     }
 
-    const handleClickOutside = () => {
-        setNav(!nav)
-    }
-
     useEffect(() => {
         const changeColor = () => {
             if (window.scrollY >= 90) {
@@ -88,20 +84,20 @@ const NavBar = () => {
                 <div className='flex items-center lg:hidden z-10'>
                     {nav ? <AiOutlineClose size={25} onClick={handleNav} /> : <AiOutlineMenu size={25} onClick={handleNav} />}
                 </div>
-                <div onClick={nav ? handleClickOutside : handleClickOutside} className={nav ? 'w-full h-screen absolute top-0 bottom-0 left-0 right-0 bg-black/60 z-[0] lg:hidden' : 'hidden'}></div>
+                <div onClick={nav ? handleNav : handleNav} className={nav ? 'w-full h-screen absolute top-0 bottom-0 left-0 right-0 bg-black/60 z-[0] lg:hidden' : 'hidden'}></div>
                 <div className={nav ? 'lg:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center w-full sm:w-1/2 h-screen bg-mainColor text-center ease-in duration-300' : 'lg:hidden absolute top-0 bottom-0 left-[-100%] right-0 flex justify-center items-center w-full sm:w-1/2 h-screen bg-mainColor text-center ease-in duration-300'}>
                     <ul >
                         <li className='p-4 text-xl hover:text-accentColor'>
-                            <Link href='/'>{translation("Início")}</Link>
+                            <Link href='/' onClick={handleNav}>{translation("Início")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
-                            <Link href='/about'>{translation("Empresa")}</Link>
+                            <Link href='/about' onClick={handleNav}>{translation("Empresa")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
-                            <Link href='/services'>{translation("Serviços")}</Link>
+                            <Link href='/services' onClick={handleNav}>{translation("Serviços")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
-                            <Link href='/contact'>{translation("Contato")}</Link>
+                            <Link href='/contact' onClick={handleNav}>{translation("Contato")}</Link>
                         </li>
                         <li className='p-4 text-xl hover:text-accentColor'>
                         <div className='group inline-block relative'>
@@ -111,7 +107,7 @@ const NavBar = () => {
                             <ul className='absolute hidden group-hover:block bg-white rounded-xl text-mainColor shadow-sm shadow-mainColor text-sm sm:text-base w-[175px]'>
                                 {locales?.map((l, index) => {
                                     return <li key={l} className=' hover:bg-mainColor/30'>
-                                        <Link href={'/'} locale={l} className='flex justify-start items-center py-3 px-5'>
+                                        <Link href={'/'} locale={l} onClick={handleNav} className='flex justify-start items-center py-3 px-5'>
                                             <Image src={Flags[index].source} alt={l === 'pt' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
                                             <p className='pl-2'>
                                                 {Flags[index].name}
