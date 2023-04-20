@@ -12,7 +12,7 @@ import { useTranslation } from 'next-i18next'
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
-    const {locale, locales } = useRouter()
+    const {locale, locales,pathname} = useRouter()
     const [color, setColor] = useState('transparent');
     const [shadow, setShadow] = useState('none');
 
@@ -65,7 +65,7 @@ const NavBar = () => {
                             <ul className='absolute hidden group-hover:block bg-white rounded-xl text-mainColor shadow-sm shadow-mainColor drop-shadow-sm w-[175px]'>
                                 {locales?.map((l, index) => {
                                     return <li key={l} className='rounded-sm hover:bg-mainColor/30'>
-                                        <Link href={'/'} locale={l} className='flex justify-start items-center py-3 px-5'>
+                                        <Link href={pathname} locale={l} className='flex justify-start items-center py-3 px-5'>
                                             <Image src={Flags[index].source} alt={l === 'pt' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
                                             <p className='pl-2'>
                                                 {Flags[index].name}
@@ -107,7 +107,7 @@ const NavBar = () => {
                             <ul className='absolute hidden group-hover:block bg-white rounded-xl text-mainColor shadow-sm shadow-mainColor text-sm sm:text-base w-[175px]'>
                                 {locales?.map((l, index) => {
                                     return <li key={l} className=' hover:bg-mainColor/30'>
-                                        <Link href={'/'} locale={l} onClick={handleNav} className='flex justify-start items-center py-3 px-5'>
+                                        <Link href={pathname} locale={l} onClick={handleNav} className='flex justify-start items-center py-3 px-5'>
                                             <Image src={Flags[index].source} alt={l === 'pt' ? 'Flag of Brazil' : 'USA flag'} className='w-10'></Image>
                                             <p className='pl-2'>
                                                 {Flags[index].name}
