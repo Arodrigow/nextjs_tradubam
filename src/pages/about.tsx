@@ -1,3 +1,4 @@
+import AboutContent from '@/components/about/AboutContent'
 import Title from '@/components/about/Title'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
@@ -8,7 +9,10 @@ interface props {
 
 function about() {
     return (
-        <Title></Title>
+        <>
+            <Title></Title>
+            <AboutContent></AboutContent>
+        </>
     )
 }
 
