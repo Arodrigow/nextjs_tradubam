@@ -1,9 +1,17 @@
+import ContactContent from '@/components/contact/ContactContent'
+import Title from '@/components/utils/Title'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
 
 function contact() {
+  const {t:translation} = useTranslation('contact')
+
   return (
-    <div>contact</div>
+    <>
+    <Title title={translation('Contato')} subtitle={translation('Nos Mande Uma Mensagem!')}></Title>
+    <ContactContent></ContactContent>
+    </>
   )
 }
 interface props {
@@ -14,7 +22,7 @@ export async function getStaticProps({locale}:props) {
       props: {
         ...(await serverSideTranslations(locale, [
           'common',
-          'index',
+          'contact',
           'all'
         ])),
       },
