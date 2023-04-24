@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 interface props {
@@ -5,7 +6,7 @@ interface props {
 }
 function QuoteButton({title}:props) {
   return (
-    <button className='w-[175px] p-2 border border-transparent bg-accentColor rounded-full text-sm text-white font-bold'>{title}</button>
+    <button className='w-[175px] p-2 border border-transparent bg-accentColor rounded-full text-sm text-white font-bold'><Link href={"/estimate"}>{title}</Link></button>
   )
 }
 
