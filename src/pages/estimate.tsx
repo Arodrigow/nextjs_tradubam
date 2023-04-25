@@ -1,3 +1,4 @@
+import EstimateContent from '@/components/estimate/EstimateContent'
 import Title from '@/components/utils/Title'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -8,6 +9,7 @@ function estimate() {
   return (
     <>
     <Title title={translation("Orçamento")} subtitle={translation("Peça grátis!")}></Title>
+    <EstimateContent></EstimateContent>
     </>
   )
 }
