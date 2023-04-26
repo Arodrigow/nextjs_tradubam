@@ -18,7 +18,7 @@ function AutoEstimate() {
         <p className='mt-2 font-bold'>{translation("Ou")}</p>
         <label htmlFor="textContent" className={''}>
         </label>
-        <textarea id="textContent" name="textContent" className='w-[80%] my-4 border-mainColor border-2 rounded-xl p-2 outline-accentColor' defaultValue={translation("Cole o texto nesta área:")} rows={10} />
+        <textarea id="textContent" name="textContent" className='w-[80%] my-4 border-mainColor border-2 rounded-xl p-2 outline-accentColor' defaultValue={translation("Cole o texto nesta área")} rows={10} />
         <button type="submit" className={'w-[80%] bg-mainColor hover:bg-accentColor px-5 py-2 rounded-xl text-white font-bold'}>
           {translation("Calcular orçamento")}
         </button>

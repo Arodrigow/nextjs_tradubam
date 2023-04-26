@@ -1,4 +1,15 @@
 {
     "Orçamento":"Price Estimate",
-    "Peça grátis!":"Get a free"
+    "Peça grátis!":"Get a free",
+    "Peça um orçamento":"Get an estimate",
+    "Automático!":"Automated",
+    "Ou":"Or",
+    "Cole o texto nesta área":"Paste the text onto the area:",
+    "Calcular orçamento":"Calculate",
+    "Direto conosco!":"Directly with us",
+    "Nome":"Name",
+    "Email":"Email",
+    "Telefone":"Phone",
+    "Mensagem":"Message:",
+    "Enviar Mensagem":"Send message"
 }
