@@ -6,7 +6,7 @@ import AutoEstimate from '../utils/AutoEstimate'
 function EstimateContent() {
   return (
     <main >
-      <div className='block sm:flex md:justify-center'>
+      <div className='block sm:flex md:justify-center p-10'>
         <AutoEstimate></AutoEstimate>
         <ContactForm></ContactForm>
       </div>
