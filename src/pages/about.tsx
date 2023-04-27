@@ -8,7 +8,7 @@ interface props {
     locale: string
 }
 
-function about() {    
+function About() {    
     const {t:translation} = useTranslation('about')
     
     return (
@@ -30,4 +30,4 @@ export async function getStaticProps({ locale }: props) {
         },
     }
 }
-export default about
+export default About
